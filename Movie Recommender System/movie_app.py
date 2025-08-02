@@ -102,7 +102,7 @@ class MovieRecommenderApp:
                 for i, rec in enumerate(recommendations):
                     with cols[i]:
                         st.text(rec['title'])
-                        st.image(rec['poster'], use_column_width=True)
+                        st.image(rec['poster'], width=150)  # Updated to use 'width' parameter
             else:
                 st.error(f"Movie '{selected_movie}' not found in the dataset")
 
